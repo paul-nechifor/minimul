@@ -46,8 +46,10 @@ class Index extends Afisare
             '<p>Această pagină conține o serie de reguli care te va ajuta să formatezi mai bine textele scrise în limba română.</p>',
             //'<p>O greșeală frecventă este scrierea limbii română cu normele altor limbi.</p>',
             '<h2>Diacriticele</h2>',
-            '<p>Limba română se scrie <strong>mereu</strong> cu diacritice. Nu există nicio scuză pentru a nu le folosi. Diacriticele nu sunt doar de frumusețe, ci schimbă semnificația literelor. Un tată nu-i același lucru cu o țâță.</p>',
-            '<p>Dacă nu știi cum se tastează literele cu diacritice pe sistemul tău de operare vezi situl <a href="http://http://www.diacritice.ro/">Diacritice.ro</a>.</p>',
+            '<p>Limba română se scrie <strong>mereu</strong> cu diacritice. Nu există nicio scuză pentru a nu le folosi. Diacriticele nu sunt doar de frumusețe, ci schimbă semnificația literelor. Un tată nu-i același lucru cu o țâță.',
+                $this->notaDeSubsol('Ca să vezi cât de trist stă treaba, Google traduce această frază ca „<em>A father is not the same as one father</em>.“. Nici măcar ei nu-și dau seama de diferența dintre aceste cuvinte?!'),
+            '</p>',
+            '<p>Dacă nu știi cum se tastează literele cu diacritice pe sistemul tău de operare vezi situl <a href="http://www.diacritice.ro/">Diacritice.ro</a>.</p>',
 
             '<h2>Punctuația</h2>',
             '<p>Semnele de punctuație fără pereche (punctul, virgula, două puncte, punctul și virgula, semnul exclamării, semnul întrebării și punctele de suspensie) se scriu legate de cuvântul precent și se lasă un spațiu după ele.</p>',
@@ -108,30 +110,43 @@ class Index extends Afisare
             '.</p>',
             '<p>Între fraze se lasă un singur spațiu, nu două.</p>',
             '<p>Dacă se folosește alinierea textului la stânga și la dreapta spațiile normale o să varieze în lungime de pe o linie pe alta, dar spațiul care nu se desparte nu va varia. Deci dacă se folosește această aliniere, spațiul după linia de dialog trebuie înlocuit cu unul fix (&nbsp;) ca să se mențină alinierea.</p>',
-            '<p>Între numere și unitățile de măsură se pune un spațiu fix (nu spațiu normal) ca să fie mereu pe aceeași linie. Exemplu: 4&nbsp;kg, 20&nbsp;mm, 28&nbsp°C.</p>',
+            '<p>Între numere și unitățile de măsură se pune un spațiu fix (nu spațiu normal) ca să fie mereu pe aceeași linie. Exemplu: 4&nbsp;kg, 20&nbsp;mm, 28&nbsp;°C.</p>',
 
             '<h3>Numere</h3>',
             '<p>În numere, grupurile de câte trei cifre se despart cu puncte pentru a fi mai ușor de citit, dar nu virgule ca la englezi. Cu virgulă se desparte partea întragă de partea zecimală.</p>',
             $this->blocGresit('<p>Am câștigat €2,000,000 la loto. O sută de mililitri înseamnă 0.1L.</p>'),
             $this->blocCorect('<p>Am câștigat 2.000.000&nbsp;€ la loto. O sută de mililitri înseamnă 0,1&nbsp;L.</p>'),
 
-            '<h2>Titluri și denumiri</h2>',
+            '<h2>Reguli tipografice</h2>',
+            '<p>Pe internet, deseori nu se specifică o lungime fixă pentru rândurile unui text și este lăsat să fie cât lungimea navigatorului. Probabil fac așa ca să nu irosească spațiu, dar rândurile prea lungi reduc lizibilitatea textului. O recomandare bună este ca media numărului de cuvinte pe rând să fie între 10 și 15 (vreo 50&ndash;75 de litere).</p>',
+
+            '<h3>Spațiere</h3>',
+            '<p>O spațiere mai mare între rânduri și cuvinte face textul mai lizibil. O recomandare este ca înălțimea rândului să fie 1,5. În <a href="http://upload.wikimedia.org/wikipedia/commons/9/94/Leading.png">exemplul ăsta</a> se vede diferența dintre spațiere.</p>',
+
+            '<h3>Alineate</h3>',
+            '<p>Sunt două feluri de a evidenția paragrafele: începerea primului rând mai din dreapta sau lăsarea unui rând gol între paragrafe. Prima variantă este mai întâlnită și este recomandată. Dar niciodată nu se folosesc amândouă.</p>',
+
+            '<h3>Legături</h3>',
+            '<p>Este preferabil ca textul pentru o hiperlegătură să descrie conținutul legăturii.</p>',
+            $this->blocGresit('<p>Vezi <a href="http://www.youtube.com/watch?v=nBJV56WUDng">aici</a> cum se desface o banană.</p>'),
+            $this->blocCorect('<p>Vezi <a href="http://www.youtube.com/watch?v=nBJV56WUDng">cum se desface o banană</a>.</p>'),
+
+            '<h3>Scrierea aldină și cursivă</h3>',
+            '<p>Când se vorbește despre cuvinte este preferabil să fie cursive, dacă nu, să fie puse între ghilimele.</p>',
+            $this->blocGresit('<p>Cuvântul "pământ" provine de la <strong>pavimentum</strong>.</p>'),
+            $this->blocCorect('<p>Cuvântul <em>pământ</em> provine de la <em>pavimentum</em>.</p>'),
+            '<p>Frazale și cuvintele în limbi străine se scriu cursiv, sau dacă nu se poate, vor fi puse între ghilimele.</p>',
+            '<p>Pentru scrierea aldină, cursivă sau pentru sublinierea cuvintelor nu se includ și semnele de punctuație din jur.</p>',
+
+            '<h3>Titluri și denumiri</h3>',
             '<p>Doar prima literă dintr-un titlu se scrie cu majusculă! Pentru numele de oameni, instituții sau locuri, toate cuvintele încep cu majusculă cu excepția cuvintelor de legătură.</p>',
             '<p>Când un titlu este inclus într-o propoziție, trebuie evidențiat. Se preferă scrierea cu litere cursive sau dacă nu se poate, scrierea între ghilimele. Mai există posibilitatea sublinierii, dar acest lucru nu este preferabil pe internet.</p>',
             $this->blocGresit('<p>Am văzut O Scrisoare Pierdută la Teatrul național Vasile Alecsandri Iași.</p>'),
             $this->blocCorect('<p>Am văzut <em>O scrisoare pierdută</em> la Teatrul Național „Vasile Alecsandri“ Iași.</p>'),
 
-            '<h2>Alineate</h2>',
-            '<p>Sunt două feluri de a evidenția paragrafele: începerea primului rând mai din dreapta sau lăsarea unui rând gol între paragrafe. Prima variantă este mai întâlnită și este recomandată. Dar niciodată nu se folosesc amândouă.</p>',
-
-            '<h2>Legături</h2>',
-            '<p>Este preferabil ca textul pentru o hiperlegătură să descrie conținutul legăturii.</p>',
-            $this->blocGresit('<p>Vezi <a href="http://www.youtube.com/watch?v=nBJV56WUDng">aici</a> cum se desface o banană.</p>'),
-            $this->blocCorect('<p>Vezi <a href="http://www.youtube.com/watch?v=nBJV56WUDng">cum se desface o banană</a>.</p>'),
-
 
             '<h2>Anexă</h2>',
-            '<p>O listă de pagini care te pot interesa:</p>',
+            '<p>O listă de pagini care te pot interesa (majoritatea sunt în limba engleză):</p>',
             '<ul>',
             '<li><a href="http://publications.europa.eu/code/ro/ro-4100000.htm">Prezentarea formală a textului</a></li>',
             '<li><em><a href="http://www.webtypography.net/toc/">The Elements of Typographic Style Applied to the Web</a></em></li>',
@@ -139,32 +154,11 @@ class Index extends Afisare
             '<li><a href="http://en.wikipedia.org/wiki/Punctuation">Pagina de pe Wikipedia englezească despre punctuație</a></li>',
             '<li><em><a href="http://ilovetypography.com/">I Love Typography</a></em></li>',
             '<li><em><a href="http://www.alistapart.com/">A List Apart</a></em></li>',
+            '<li><a href="steagul_scrierii_corecte.png">Steagul scrierii corecte</a>, cunoscut în engleză ca <em>Grammar Nazi Flag</em></li>',
             '</ul>',
-            
-
-
-
             '';
-            //preferabil cât mai puține cuvinte pe linie (mai ușor de citit)
-            //ghilimelele corecte sunt „astea“, adică 99 jos și 66 sus.
-            //când se vorbește despre cuvinte este preferabil să fie cursive, dacă nu, să fie puse între ghilimele.Spre exemplu, <em>pământ</em> provine de la cuvântul latin <em>pavimentum</em>
-            //frazale și cuvintele în limbi străine se scriu cursiv, sau dacă nu se poate, vor fi puse între ghilimele.
-            // Pentru scrierea aldină sau cursivă sau pentru sublinierea cuvintelor, nu se includ și 
-
-
-
-            //vezi http://publications.europa.eu/code/ro/ro-4100000.htm
-
-
-            // La sfârșit sa fie o imagine cu „steagul scrierii corecte“ adică grammar nazi flag.
-
-            // ceva interesant/ steagul grammar nazi are aceleași arii ca steagul nazist pentru toate culorile,
-
-            //syntax nazi flag, puntutation nazi flag, typography nazi flag
-
 
             // să fac o lista cu erorile copiate din engleza ca "asta" și O Noapte Furtunoasă
-
             // La sfârșit să fie un TL;DR de cu cele mai importante reguli.
 
 

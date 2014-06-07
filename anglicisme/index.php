@@ -10,7 +10,8 @@ class Index extends Afisare
     public $acasa = "/anglicisme";
     public $cod = "anglicisme";
     public $titlu = "Dicționar de anglicisme";
-    public $descriere = "O listă de anglicisme cu traducerea corectă.";
+    public $descriere = "Acest dicționar de anglicisme te ajută să folosești cuvintele românești corecte pentru termenii din engleză care nu se potrivesc în limba română, cum este „download“.";
+
     public $cuvinteCheie = "dicționar, anglicisme, listă, traducere";
 
     public function scrieDictionarul()
@@ -25,6 +26,7 @@ class Index extends Afisare
             $cuvtrad = explode("=", $dictionar[$i]);
             $cuv = $cuvtrad[0];
             $trad = $cuvtrad[1];
+            $name = str_replace(" ", "_", str_replace("(", "", (str_replace(")", "", $cuv))));
 
             $cuvParti = explode(",", $cuv);
             if (count($cuvParti) > 1)
@@ -33,7 +35,8 @@ class Index extends Afisare
             if ($trad[0] == '[')
             {
                 $t = substr($trad, 1, -1);
-                $trad = "<em>vezi <a href='#$t'>$t</a><em>";
+                $tname = str_replace(" ", "_", str_replace("(", "", (str_replace(")", "", $t))));
+                $trad = "<em>vezi <a href='#$tname'>$t</a></em>";
             }
             $trad = implode(', ', explode(',', $trad));
 
@@ -43,7 +46,7 @@ class Index extends Afisare
                 $exParti = explode("=", $dictionar[$i+1]);
                 $ex = '<a class="info" href="#">(exemplu)<span>Greșit: ' . $exParti[0] . '<br/>Corect: '. $exParti[1] . '</span></a>';
             }
-            echo "<tr><td><a name='{$cuvtrad[0]}'></a>$cuv</td><td>$trad</td><td class='ex'>$ex</td></tr>"; 
+            echo "<tr><td><a name='{$name}'></a>$cuv</td><td>$trad</td><td class='ex'>$ex</td></tr>"; 
         }
 
         echo "</table>";
