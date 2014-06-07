@@ -43,6 +43,8 @@ class Afisare
     public $limba = "ro";
     public $veziSi = true;
 
+    public static $googleAnalyticsCode = "<script type=\"text/javascript\">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-21890175-1']);_gaq.push(['_trackPageview']);(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>";
+
     public function scrieStanga()
     {
         echo "&nbsp;";
@@ -89,7 +91,7 @@ class Afisare
                 '<link rel="stylesheet" href="/stil.css" type="text/css"/>',
                 '<link rel="shortcut icon" href="/_iconite/', $this->cod, '.png" type="image/png"/>',
                 implode($this->alteLiniiHead),
-                //"<script type=\"text/javascript\">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-21890175-1']);_gaq.push(['_trackPageview']);(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>",
+                //Afisare::$googleAnalyticsCode,
             '</head>',
             '<body>',
                 '<div id="stanga">';

@@ -1,5 +1,5 @@
 <?php
-require_once("baza.php");
+require_once("../baza.php");
 require_once("nume.php");
 require_once("localitate.php");
 require_once("strada.php");
@@ -113,11 +113,12 @@ class Index extends Afisare
 
         // Data nașterii și vârsta
         date_default_timezone_set("Europe/Bucharest");
-        $date = new DateTime();
-        $date->sub(new DateInterval('P' . mt_rand(365 * 18, 365 * 40) . 'D'));
-        $interval = $date->diff(new DateTime(), true);
-        $this->dataNasterii = $date->format('d.m.Y');
-        $this->varsta = $interval->y;
+        $v = mt_rand(18100, 40000) / 1000.0;
+        if ( ($v - floor($v)) > 0.9)
+            $v -= 0.1;
+        $timp = time() - intval($v * 365 * 24 * 60 * 60);
+        $this->dataNasterii = strftime("%d.%m.%Y", $timp);
+        $this->varsta = floor($v);
 
         // Localitate și județ
         $l = explode("|", alegeLocalitate());

@@ -1,5 +1,5 @@
 <?php
-require_once("baza.php");
+require_once("../baza.php");
 require_once("lista.php");
 
 

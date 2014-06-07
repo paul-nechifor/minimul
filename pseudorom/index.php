@@ -1,5 +1,5 @@
 <?php
-require_once("baza.php");
+require_once("../baza.php");
 
 $silabe = array(array(1667468, 'a'), array(1487637, 'de'), array(948458, 'te'), array(907274, 'în'), array(793207, 'e'),
 array(673170, 'și'), array(638112, 'ca'), array(594429, 're'), array(498252, 'la'), array(494631, 'o'), array(472142,

@@ -1,5 +1,5 @@
 <?php
-require_once("baza.php");
+require_once("../baza.php");
 
 
 // să scriu pe Gugetări subite că am facut apgina asta.
