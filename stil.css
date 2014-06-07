@@ -1,0 +1,52 @@
+/*
+
+să vă cum să 
+
+*/
+
+
+*{margin:0;padding:0;outline:none}
+a{text-decoration:none}
+html{cursor:default;font-family:sans-serif,serif;font-size:13px; /*background-color:#eee;*/ word-spacing:1px;}
+body{width:800px;margin:0 auto;}
+#stanga,#dreapta{width:180px;float:left}
+#centru{width:438px;float:left;background-color:#FFF;border:1px dashed #aaa;border-top-width:0;}
+#antet{padding-top:10px;}
+#antet h1 a{color:#888; text-transform:uppercase;font-weight:normal}
+#antet h1 {text-align:center; font-family:"Palatino Linotype", "Book Antiqua", "Palatino", serif; font-size:25px; letter-spacing:5px;}
+#continut{padding:20px}
+#continut p{line-height:1.6;text-align:justify;text-indent:30px; color:#111}
+#continut a{color:#5F91BA;}
+#continut a:hover {border-bottom:1px solid #AAA}
+#continut ul{padding-left:50px;list-style-type:circle;}
+#continut li{line-height:1.6;}
+#subsol{padding-bottom:10px;}
+#subsol a{color:#5F91BA;}
+#subsol p{text-align:center;font-size:10px;color:#888}
+
+
+/*.intro{margin-bottom:20px;padding:10px;background-color:#f7f7f7;border:1px solid #efefef}*/
+.intro{margin-bottom:20px;padding:10px 0;border:1px solid #aaa; border-width:1px 0; font-style:italic}
+
+
+
+#antet a.girltalk{display:block;text-indent:-9999px;width:399px;height:162px;margin:0 auto;background:url(girltalk/title.png)}
+
+
+form.formular fieldset {margin: 10px 0 10px 0; border:1px solid #BBB; padding-bottom:15px;}
+form.formular fieldset legend {margin-left:10px; padding:5px; font-style:italic}
+form.formular fieldset ul {padding:10px !important; list-style:none !important;}
+form.formular fieldset ul li {padding-bottom:10px;}
+form.formular fieldset ul li label {display:block; width:140px; float:left; margin-right:10px; text-align:right}
+form.formular fieldset ul li img {140px; float:left; padding:5px; background-color:#e2e2e2;}
+form.formular fieldset ul li input {width:220px; height:18px; padding:1px; margin:0; border:1px solid #bbb; background-color:#f2f2f2; font-size:12px;}
+form.formular fieldset ul li textarea {width:220px; height:50px; padding:1px; margin:0; border:1px solid #bbb; background-color:#f2f2f2; font-size:12px; font-family:sans-serif}
+form.formular fieldset ul li span {padding:0 10px; color:#D33; font-weight:bold;}
+
+
+.cugetare{padding:10px 0 10px 0;}
+.sep{padding-top:10px; text-align:center !important; text-indent:0 !important;}
+.extracuge{font-size:10px; color:#FFF !important}
+.extracuge a{color:#FFF !important}
+div.cugetare:hover .extracuge{color:#AAA !important}
+div.cugetare:hover .extracuge a{color:#5F91BA !important}

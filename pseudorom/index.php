@@ -1,6 +1,5 @@
 <?php
-
-$timp_inceput = microtime(true);
+require_once("baza.php");
 
 $silabe = array(array(1667468, 'a'), array(1487637, 'de'), array(948458, 'te'), array(907274, 'în'), array(793207, 'e'),
 array(673170, 'și'), array(638112, 'ca'), array(594429, 're'), array(498252, 'la'), array(494631, 'o'), array(472142,
@@ -242,7 +241,6 @@ function cuvinte()
 
     return $ret;
 }
-
 function numar()
 {
     $sansa = mt_rand(1, 100);
@@ -264,7 +262,6 @@ function numar()
         return $ret;
     }
 }
-
 function propozitie()
 {
     $ret = nume();
@@ -308,7 +305,6 @@ function propozitie()
 
     return $ret;
 }
-
 function alineat()
 {
     $ret = "<p>";
@@ -322,48 +318,33 @@ function alineat()
 // Trebuie să pun și ?!. și „ghilimele“ și linie de pauză și numere și intervale de numere și paranteze și titluri nu
 // doar cuvinte.
 
-echo '<?xml version="1.0" encoding="utf-8"?>',
-'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">',
-'<html xmlns="http://www.w3.org/1999/xhtml" lang="ro">',
-    '<head>',
-        '<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>',
-        '<meta http-equiv="Content-Language" content="ro"/>',
-        '<title>Pseudoromână</title>',
-        '<meta name="description" content="Un generator de pseudoromână."/>',
-        '<meta name="keywords" content="pseudoromână, lorem ipsum, generator"/>',
-        '<meta name="author" content="Paul Nechifor"/>',
-        '<link rel="shortcut icon" href="favicon.png" type="image/png"/>',
-        '<style type="text/css">',
-            '*{margin:0;padding:0;outline:none}',
-            "html{cursor:default;font-family:sans-serif,serif;font-size:13px;background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGklEQVQY02NgYGDgamhoYABhCAEVYICLAgUAtkMJH4c8RtYAAAAASUVORK5CYII=')}",
-            'body{width:400px;padding:20px;margin:0 auto;background-color:#FFF;border:1px solid #dedede;}',
-            'h1 a{margin:0 auto;display:block;width:308px;height:46px;text-indent:-9999px;background:url(titlu.png)}',
-            'h1 a:hover{background:url(titlu.png) 0px 46px}',
-            'p{line-height:1.5;text-align:justify;text-indent:30px;}',
-            'a{text-decoration:none;color:#888;}',
-            'a:hover{text-decoration:underline}',
-            '#intro{margin:20px 0;padding:10px;background-color:#f7f7f7;border:1px solid #efefef}',
-            '#ultimul{text-indent:0;font-size:10px;text-align:center;color:#444; margin-top:15px;}',
-        '</style>',
-        "<script type=\"text/javascript\">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-21890175-1']);_gaq.push(['_trackPageview']);(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>",
-    '</head>',
-    '<body>';
+class Index extends Afisare
+{
+    public $acasa = "/pseudorom";
+    public $cod = "pseudorom";
+    public $titlu = "Pseudoromână";
+    public $descriere = "Un generator de pseudoromână.";
+    public $cuvinteCheie = "pseudoromână, lorem ipsum, generator";
 
-echo
-    '<h1><a href="/pseudorom">Pseudoromână</a></h1>',
-    '<div id="intro">',
-    '<p>Acesta este un generator de pseudoromână. Este echivalentul a <a href="http://ro.lipsum.com/">Lorem ipsum</a>',
-    ' pentru limba română, adică folosește literele specifice limbii române. Dar spre diferență de Lorem ipsum, acest',
-    ' generator adaugă și numere, paranteze, ghilimele, linii de pauză și puncte de suspensie.</p>',
-    '<p>Acest tip de generator se poate folosi, spre exemplu, pentru a testa un <em>font</em> nou pentru a vedea dacă afișează cum trebuie literele românești corecte pe un sit web.</p>',
-    '<p>Urmează textul generat aleatoriu. Apasă pe titlu ca să generezi altul.</p>',
-    '</div>',
-    "<p>Lure ișu dulor set amăt, consectăr adipșici înlit, săd du iușmod tempur încidut cât laborare și dulori magnici alica. ", substr(alineat(), 3);
+    public function scrieContinut()
+    {
+        echo
+        '<div class="intro">',
+            '<p>Acesta este un generator de pseudoromână. Este echivalentul a <a href="http://ro.lipsum.com/">Lorem ipsum</a>',
+            ' pentru limba română, adică folosește literele specifice limbii române. Dar spre diferență de Lorem ipsum, acest',
+            ' generator adaugă și numere, paranteze, ghilimele, linii de pauză și puncte de suspensie.</p>',
+            '<p>Acest tip de generator se poate folosi, spre exemplu, pentru a testa un font nou pentru a vedea dacă afișează cum trebuie literele românești corecte pe un sit web.</p>',
+            '<p>Urmează textul generat aleatoriu. Apasă pe titlu sau reîncarcă pagina ca să generezi altul.</p>',
+        '</div>',
+        "<p>Lure ișu dulor set amăt, consectăr adipșici înlit, săd du iușmod tempur încidut cât laborare și dulori magnici alica. ", substr(alineat(), 3);
 
-for ($i = 0; $i < 10; $i++)
-    echo alineat();
+        for ($i = 0; $i < 10; $i++)
+            echo alineat();
+    }
+}
 
-echo
-    '<p id="ultimul">Vezi și alte pagini de pe situl ăsta la <a href="/">minimul.ro</a>.</p>',
-    '</body></html><!--', (microtime(true) - $timp_inceput), '-->';
+$index = new Index();
+$index->scrie();
+
+
 ?>

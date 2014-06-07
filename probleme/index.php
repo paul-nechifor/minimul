@@ -1,5 +1,5 @@
 <?php
-$timp_inceput = microtime(true);
+require_once("../baza.php");
 
 // Să fac niște butoane bune pentru Souție și Altă problemă.
 // Apasă spațiu sau oricare dintre săgeți pentru a reîncărca pagina (cu altă problemă) (dar arată soluția înainte).
@@ -38,13 +38,11 @@ function problemaAleatoare()
 {
     global $numarDeProbleme;
 
-    //$mysqli = new mysqli("", "irragal_mysql", "serenmysql", "irragal_alfa");
-    $mysqli = new mysqli("", "root", "serenloft", "alfa");
+    BazaDeDate::deschide();
     $cod = mt_rand(0, $numarDeProbleme - 1);
-    $rez = $mysqli->query("select problema from probleme where cod = $cod;");
-    if (!$rez) die("Eroare MySQL");
+    $rez = BazaDeDate::executa("select problema from probleme where cod = $cod;");
     $r = $rez->fetch_array();
-    $mysqli->close();
+    BazaDeDate::inchide();
     return $r[0];
 }
 
@@ -117,7 +115,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>',
         '<meta name="keywords" content="probleme, șah, sah"/>',
         '<meta name="author" content="Paul Nechifor"/>',
         '<link rel="stylesheet" type="text/css" href="stil.css"/>',
-        '<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>',
+        '<link rel="shortcut icon" href="/_iconite/probleme.png" type="iamge/png"/>',
         '<script src="script.js" type="text/javascript"></script>',
         "<script type=\"text/javascript\">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-21890175-1']);_gaq.push(['_trackPageview']);(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>",
     '</head>',
