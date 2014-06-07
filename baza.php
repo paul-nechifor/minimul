@@ -41,6 +41,7 @@ class Afisare
 
     // Pot fi modificate:
     public $limba = "ro";
+    public $veziSi = true;
 
     public function scrieStanga()
     {
@@ -59,10 +60,16 @@ class Afisare
     }
     public function scrieSubsol()
     {
-        if ($this->limba == "ro")
-            echo '<p>Vezi și alte pagini de pe situl ăsta la <a href="/">minimul.ro</a>.</p>';
-        elseif ($this->limba == "en")
-            echo '<p>See other pages on this website at <a href="/">minimul.ro</a>.</p>';
+        echo '<p>';
+        if ($this->veziSi)
+        {
+            if ($this->limba == "ro")
+                echo 'Vezi și alte pagini de pe situl ăsta la <a href="/">minimul.ro</a>.<br/>';
+            elseif ($this->limba == "en")
+                echo 'See other pages on this website at <a href="/">minimul.ro</a>.<br/>';
+        }
+
+        echo '(<a href="http://creativecommons.org/licenses/by-nc/3.0/ro/">cc</a>) 2010&ndash;2011 Paul Nechifor</p>';
     }
     public function scrie()
     {

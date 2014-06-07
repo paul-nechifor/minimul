@@ -7,7 +7,7 @@ require_once("strada.php");
 class Index extends Afisare
 {
     public $acasa = "/identitate";
-    public $cod = "identitate";
+    public $cod = "iden";
     public $titlu = "Identitate falsă";
     public $descriere = "Un sit pe care poți să-ți generezi o identitate falsă plauzibilă cu nume, data nașterii, adresă, număr de telefon și avatar.";
     public $cuvinteCheie = "identitate, identitate falsă, identitate plauzibilă, alege nume, avatar";
@@ -166,8 +166,8 @@ class Index extends Afisare
                             '<input id="nume" type="text" value="', $this->nume,'"/>',
                         '</li>',
                         '<li>',
-                            '<label for="gen">Gen:</label>',
-                            '<input id="gen" type="text" value="', $this->gen,'"/>',
+                            '<label for="sex">Sex:</label>',
+                            '<input id="sex" type="text" value="', $this->gen,'"/>',
                         '</li>',
                         '<li>',
                             '<label for="datanasterii">Data nașterii:</label>',

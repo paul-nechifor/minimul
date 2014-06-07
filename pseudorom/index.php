@@ -338,7 +338,7 @@ class Index extends Afisare
         '</div>',
         "<p>Lure ișu dulor set amăt, consectăr adipșici înlit, săd du iușmod tempur încidut cât laborare și dulori magnici alica. ", substr(alineat(), 3);
 
-        for ($i = 0; $i < 10; $i++)
+        for ($i = 0; $i < 20; $i++)
             echo alineat();
     }
 }
