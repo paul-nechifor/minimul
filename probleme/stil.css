@@ -1,0 +1,52 @@
+*{padding:0;margin:0;outline:none}
+html {background:#f7f7f7 url(fundal.png) repeat-x}
+#divtabla{width:530px; height:530px; margin:15px auto 5px auto}
+#usus{width:530px;height:8px;background:url(umbra_sus.png)}
+#ust{float:left;width:8px;height:514px;background:url(umbra_stanga.png)}
+#tabla{float:left;border-collapse:collapse;border:1px solid #DDD}
+#udr{float:left;width:8px;height:514px;background:url(umbra_dreapta.png)}
+#ujos{clear:both;width:530px;height:8px;/*margin:514px 0;*/background:url(umbra_jos.png)}
+#continut{background:#eee; border:1px solid #ddd;border-width:1px 0;margin:40px 0 0 0; text-align:justify}
+
+.alb{background-color:#FFF}
+div.alb:hover {background:#FFF url(selectii.png)}
+.negru{background-color:#DDD}
+div.negru:hover {background:#DDD url(selectii.png)}
+
+div.alb.incercat{background:#FFF url(selectii.png) 0 -64px;}
+div.negru.incercat{background:#DDD url(selectii.png) 0 -64px;}
+div.alb.corect{background:#FFF url(selectii.png) 0 -192px;}
+div.negru.corect{background:#DDD url(selectii.png) 0 -192px;}
+div.alb.gresit{background:#FFF url(selectii.png) 0 -256px;}
+div.negru.gresit{background:#DDD url(selectii.png) 0 -256px;}
+
+.pn{background:url(piese.png)    0   -64px}
+.nn{background:url(piese.png)  -64px -64px}
+.cn{background:url(piese.png) -128px -64px}
+.tn{background:url(piese.png) -192px -64px}
+.dn{background:url(piese.png) -256px -64px}
+.rn{background:url(piese.png) -320px -64px}
+.pa{background:url(piese.png)    0     0}
+.na{background:url(piese.png)  -64px   0}
+.ca{background:url(piese.png) -128px   0}
+.ta{background:url(piese.png) -192px   0}
+.da{background:url(piese.png) -256px   0}
+.ra{background:url(piese.png) -320px   0}
+.alb,.negru,.pn,.nn,.cn,.tn,.dn,.rn,.pa,.na,.ca,.ta,.da,.ra{width:64px;height:64px;}
+#textul {text-align:center;width:522px; margin:0 auto;}
+#sol,#alt{display:block;width:121px;height:42px;text-indent:-9999px}
+#alt{float:right;background:url(butoane.png)}
+#alt:hover {background:url(butoane.png) 0 126px}
+#sol{float:left;background:url(butoane.png) 0 84px}
+#sol:hover {background:url(butoane.png) 0 42px}
+#explicatie{display:block;padding-top:14px;}
+p{font-size:12px; font-family:sans-serif; color:#444}
+a{color:#777;}
+#text {width:400px;margin:0 auto 20px auto;}
+#ultima{margin:20px 0;}
+#ultima p {text-align:center;font-size:10px}
+
+
+h1{text-indent:-9999px;display:block;margin:10px auto;background:url(titlu.png)}
+h1,h1 a{display:block;width:372px;height:62px;}
+h1:hover {background:url(titlu.png) 0 -62px;}
