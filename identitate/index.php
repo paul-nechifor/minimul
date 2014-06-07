@@ -140,7 +140,7 @@ class Index extends Afisare
         $this->adresa = "Str. $s nr. $n, bl. $bl, sc. $sc, et. $et,  ap. $ap, cod poștal $codPostal, " . $this->localitate . ', ' . $this->judet;
 
         // Avatarul
-        $this->avatar = 'avatare/' . mt_rand(0, 1360) . '.jpg';
+        $this->avatar = 'identitate/avatare/' . mt_rand(0, 1360) . '.jpg';
 
     }
     public function scrieContinut()
