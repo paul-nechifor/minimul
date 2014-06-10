@@ -168,25 +168,4 @@ $articole = array
         "<p>Înainte de a avea discuția asta trebuie hotărât ce este un nume românesc. Un purist extrem ar zice că nici Maria nu-i nume românesc pentru că e de origine ebraică și se găsește în foarte țări, dar eu consider un nume românesc acela care e destul de întâlnit la români și, cel mai important, se scrie românește. Spre exemplu am mai găsit și Alice și Beatrice, dar nu le iau în considerare. La bărbați, Jean și Henry (printre altele) nu-s românești.</p>",
     )
 );
-
-/*
-
-Știam că vreo 2000-3000 de cuvinte sunt înțelese de toți vorbitorii unei limbi. Mă gândesc, dar cred că n-am timp, să percurg toată baza de date de la DEX Online ca să văd câte cuvinte știu. Mai învăț și chestii noi, spre exemplu eu credeam că bou înseamnă mascul de vacă, dar defapt înseamnă taur castrat, nu orice taur.
-
-
-
-
-
-
-Peep Show e un serial britanic de comedie tare. (continuă) e și trist ei narează.
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++ Să pun o chestie din aia de comentat în pagină cu răspunsuri.
-
-
-
-
-
-
-*/
 ?>
