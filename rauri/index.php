@@ -37,8 +37,6 @@ class Index extends Afisare
         }
         $this->alteLiniiHead[] = substr($l, 0, -1) . "{width:{$this->lungime}px;height:{$this->inaltime}px;color:#FFF}";
         $this->alteLiniiHead[] = '</style>';
-
-        
     }
 
     public function scrieContinut()
@@ -58,6 +56,7 @@ class Index extends Afisare
         echo
         '<div id="scriere">',
         '<h2>Cum se joacă</h2>',
+        '<p>Jocul ăsta nu a fost terminat.</p>',
         '<p>Scopul jocului este de a elimina toate piesele de pe tablă. Pentru a se elimina o piesă, se apasă pe ea și apoi pe una identică. Dacă există un drum între ele care nu are mai mult de două unghiuri drepte, atunci piesele vor fi eliminate.</p>',
         '</div>';
 

@@ -333,7 +333,7 @@ class Index extends Afisare
             '<p>Acesta este un generator de pseudoromână. Este echivalentul a <a href="http://ro.lipsum.com/">Lorem ipsum</a>',
             ' pentru limba română, adică folosește literele specifice limbii române. Dar spre diferență de Lorem ipsum, acest',
             ' generator adaugă și numere, paranteze, ghilimele, linii de pauză și puncte de suspensie.</p>',
-            '<p>Acest tip de generator se poate folosi, spre exemplu, pentru a testa un font nou pentru a vedea dacă afișează cum trebuie literele românești corecte pe un sit web.</p>',
+            '<p>Acest tip de generator se poate folosi, spre exemplu, pentru a testa un font nou pentru a vedea dacă afișează cum trebuie literele românești corecte pe un sit web. Vezi o carte scrisă cu acest generator: <em><a href="/pseudorom/gipa_ver_lesimar.pdf">Gipă ver leșimar</a></em>.</p>',
             '<p>Urmează textul generat aleatoriu. Apasă pe titlu sau reîncarcă pagina ca să generezi altul.</p>',
         '</div>',
         "<p>Lure ișu dulor set amăt, consectăr adipșici înlit, săd du iușmod tempur încidut cât laborare și dulori magnici alica. ", substr(alineat(), 3);
