@@ -66,9 +66,9 @@ class Afisare
         if ($this->veziSi)
         {
             if ($this->limba == "ro")
-                echo 'Vezi și alte pagini de pe situl ăsta la <a href="/">minimul.ro</a>.<br/>';
+                echo 'Vezi și alte pagini de pe <a href="/minimul">situl ăsta</a>.<br/>';
             elseif ($this->limba == "en")
-                echo 'See other pages on this website at <a href="/">minimul.ro</a>.<br/>';
+                echo 'See other pages on <a href="/minimul">this website</a>.<br/>';
         }
 
         echo '(<a href="http://creativecommons.org/licenses/by-nc/3.0/ro/">cc</a>) 2010&ndash;2011 Paul Nechifor</p>';
