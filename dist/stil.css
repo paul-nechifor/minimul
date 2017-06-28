@@ -1,4 +1,4 @@
-@font-face {font-family:"Anton";font-style:normal;font-weight:normal;src:local("Anton"),url("/_fonturi/Anton.woff") format("woff")}
+@import url('https://fonts.googleapis.com/css?family=Anton');
 
 /* General */
 * {margin:0;padding:0;outline:none;color:#505050}
