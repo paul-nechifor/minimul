@@ -6,7 +6,7 @@ require_once("../baza.php");
 
 class Index extends Afisare
 {
-    public $acasa = "/indrumar";
+    public $acasa = "/minimul/indrumar";
     public $cod = "indrumar";
     public $titlu = "Scurt îndrumar";
     public $descriere = "O pagină cu o serie de reguli care te va ajuta să formatezi mai bine textele scrise în limba română.";

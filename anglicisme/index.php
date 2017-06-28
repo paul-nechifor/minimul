@@ -7,7 +7,7 @@ require_once("lista.php");
 
 class Index extends Afisare
 {
-    public $acasa = "/anglicisme";
+    public $acasa = "/minimul/anglicisme";
     public $cod = "anglicisme";
     public $titlu = "Dicționar de anglicisme";
     public $descriere = "Acest dicționar de anglicisme te ajută să folosești cuvintele românești corecte pentru termenii din engleză care nu se potrivesc în limba română, cum este „download“.";

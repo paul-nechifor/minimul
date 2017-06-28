@@ -4,7 +4,7 @@ require_once("texte.php");
 
 class Index extends Afisare
 {
-    public $acasa = "/cugetari";
+    public $acasa = "/minimul/cugetari";
     public $cod = "cuge";
     public $titlu = "Cugetări subite";
     public $descriere = "Jurnalul meu pe internet.";

@@ -3,7 +3,7 @@ require_once("../baza.php");
 
 class Index extends Afisare
 {
-    public $acasa = "/rauri";
+    public $acasa = "/minimul/rauri";
     public $cod = "r";
     public $titlu = "Râuri";
     public $descriere = "";
@@ -11,8 +11,8 @@ class Index extends Afisare
 
     public $alteLiniiHead = array
     (
-        '<script src="/_scripturi/jquery.min.js" type="text/javascript"></script>',
-        '<script src="script.js" type="text/javascript"></script>',
+        '<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>',
+        '<script src="script.js"></script>',
     );
 
     private $culori = array('fb4b2d', 'db6e2c', 'fb9928', 'f3c71c', 'a7c71c', '809921', '86c1a1', '7241bc', 'c53aa9', 'ff3a90');
@@ -26,7 +26,7 @@ class Index extends Afisare
         $this->alteLiniiHead[] = '#stanga,#dreapta{width:0}';
         $this->alteLiniiHead[] = '#centru{width:898px}';
         $this->alteLiniiHead[] = '.g{width:'.$this->lungime.'px;height:'.$this->inaltime.'px;background:#EEE;margin:1px;float:left;font-size:'.($this->lungime-1).'px;line-height:'.$this->inaltime.'px;text-align:center}';
-        $this->alteLiniiHead[] = '#contine{width:800px;height:540px;margin:0 auto}';
+        $this->alteLiniiHead[] = '#contine{width:800px;height:540px;margin:0 auto;user-select:none}';
         $this->alteLiniiHead[] = '#scriere{width:498px;margin:0 auto;}';
 
         $l = '';
