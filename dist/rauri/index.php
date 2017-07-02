@@ -15,7 +15,7 @@ class Index extends Afisare
         '<script src="script.js"></script>',
     );
 
-    private $culori = array('fb4b2d', 'db6e2c', 'fb9928', 'f3c71c', 'a7c71c', '809921', '86c1a1', '7241bc', 'c53aa9', 'ff3a90');
+    private $culori = array('fb4b2d', 'f3c71c', '809921', '7241bc', 'ff3a90');
     private $piese = array('♠', '♣', '♥', '♦');
     private $lungime = 48;
     private $inaltime = 58;
@@ -48,7 +48,7 @@ class Index extends Afisare
             {
                 echo
                 '<div class="g">',
-                    '<div class="c', mt_rand(0, 9), '">', $this->piese[mt_rand(0, 3)], '</div>',
+                    '<div class="c', mt_rand(0, 4), '">', $this->piese[mt_rand(0, 3)], '</div>',
                 '</div>';
             }
         }
