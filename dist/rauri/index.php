@@ -7,7 +7,6 @@ class Index extends Afisare
     public $cod = "r";
     public $titlu = "Râuri";
     public $descriere = "";
-    public $cuvinteCheie = "";
 
     public $alteLiniiHead = array
     (

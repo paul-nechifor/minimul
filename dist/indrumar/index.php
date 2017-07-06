@@ -10,7 +10,6 @@ class Index extends Afisare
     public $cod = "indrumar";
     public $titlu = "Scurt îndrumar";
     public $descriere = "O pagină cu o serie de reguli care te va ajuta să formatezi mai bine textele scrise în limba română.";
-    public $cuvinteCheie = "îndrumar, tipografie, diacritice, punctuație, scriere corectă";
 
     public $noteDeSubsol = array();
 

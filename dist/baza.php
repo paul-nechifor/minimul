@@ -34,7 +34,6 @@ class Afisare
     public $cod = "";
     public $titlu = "";
     public $descriere = "";
-    public $cuvinteCheie = "";
 
     // Opțional de completat:
     public $alteLiniiHead = array();
@@ -71,7 +70,7 @@ class Afisare
                 echo 'See other pages on <a href="/minimul">this website</a>.<br/>';
         }
 
-        echo '(<a href="http://creativecommons.org/licenses/by-nc/3.0/ro/">cc</a>) 2010&ndash;2011 Paul Nechifor</p>';
+        echo '(<a href="http://creativecommons.org/licenses/by-nc/3.0/ro/">cc</a>) 2010&ndash;2017 Paul Nechifor</p>';
     }
     public function scrie()
     {
@@ -86,8 +85,6 @@ class Afisare
                 '<title>', $this->titlu, '</title>',
                 '<meta name="viewport" content="width=device-width,initial-scale=1">',
                 '<meta name="description" content="', $this->descriere, '">',
-                '<meta name="keywords" content="', $this->cuvinteCheie, '">',
-                '<meta name="author" content="Paul Nechifor">',
                 '<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">',
                 '<link rel="stylesheet" href="/minimul/stil.css" type="text/css">',
                 '<link rel="shortcut icon" href="/minimul/_iconite/', $this->cod, '.png" type="image/png">',

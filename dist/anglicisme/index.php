@@ -12,8 +12,6 @@ class Index extends Afisare
     public $titlu = "Dicționar de anglicisme";
     public $descriere = "Acest dicționar de anglicisme te ajută să folosești cuvintele românești corecte pentru termenii din engleză care nu se potrivesc în limba română, cum este „download“.";
 
-    public $cuvinteCheie = "dicționar, anglicisme, listă, traducere";
-
     public function scrieDictionarul()
     {
         global $dictionar;

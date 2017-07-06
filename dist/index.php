@@ -7,7 +7,6 @@ class Index extends Afisare
     public $cod = "minimul";
     public $titlu = "Minimul";
     public $descriere = "Un sit minimalist.";
-    public $cuvinteCheie = "minimul, minimalism, bancuri, șah";
 
     public $veziSi = false;
 

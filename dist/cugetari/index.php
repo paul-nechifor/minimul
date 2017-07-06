@@ -8,7 +8,6 @@ class Index extends Afisare
     public $cod = "cuge";
     public $titlu = "Cugetări subite";
     public $descriere = "Jurnalul meu pe internet.";
-    public $cuvinteCheie = "cugetări subite, jurnal";
     private $luni = array("", "ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie");
 
     private function dataBuna($data)
